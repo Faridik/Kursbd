@@ -46,7 +46,7 @@
      </rect>
     </property>
     <property name="text">
-     <string>Вход / Регистрация</string>
+     <string>Вход </string>
     </property>
    </widget>
    <widget class="QPushButton" name="profileButton">
@@ -56,13 +56,29 @@
     <property name="geometry">
      <rect>
       <x>560</x>
-      <y>130</y>
+      <y>190</y>
       <width>131</width>
       <height>61</height>
      </rect>
     </property>
     <property name="text">
      <string>Мой профиль</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="signinButton">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>560</x>
+      <y>120</y>
+      <width>131</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Регистрация</string>
     </property>
    </widget>
   </widget>

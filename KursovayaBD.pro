@@ -28,16 +28,19 @@ SOURCES += \
         mainwindow.cpp \
     loginwindow.cpp \
     courseswindow.cpp \
-    profilewindow.cpp
+    profilewindow.cpp \
+    signinwindow.cpp
 
 HEADERS += \
         mainwindow.h \
     loginwindow.h \
     courseswindow.h \
-    profilewindow.h
+    profilewindow.h \
+    signinwindow.h
 
 FORMS += \
         mainwindow.ui \
     loginwindow.ui \
     courseswindow.ui \
-    profilewindow.ui
+    profilewindow.ui \
+    signinwindow.ui

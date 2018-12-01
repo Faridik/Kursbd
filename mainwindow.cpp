@@ -9,6 +9,7 @@ MainWindow::MainWindow(QWidget *parent) :
     connect(ui->coursesButton, SIGNAL(pressed()),this, SLOT(openCoursesWindow()));
     connect(ui->loginButton, SIGNAL(pressed()),this, SLOT(openLoginWindow()));
     connect(ui->profileButton, SIGNAL(pressed()),this, SLOT(openProfile()));
+    connect(ui->signinButton, SIGNAL(pressed()),this, SLOT(openSigninWindow()));
 }
 
 void MainWindow::openCoursesWindow()
@@ -27,6 +28,14 @@ void MainWindow::openLoginWindow()
     this->setEnabled(false);
 }
 
+void MainWindow::openSigninWindow()
+{
+    signin = new signinWindow();
+    connect(signin, SIGNAL(back()),this,SLOT(backFromSignin()));
+    signin->show();
+    this->setEnabled(false);
+}
+
 void MainWindow::openProfile()
 {
     profile = new profileWindow();
@@ -40,6 +49,13 @@ void MainWindow::backFromLogin()
     this->setEnabled(true);
     login->hide();
     delete login;
+}
+
+void MainWindow::backFromSignin()
+{
+    this->setEnabled(true);
+    signin->hide();
+    delete signin;
 }
 
 void MainWindow::backFromCourses()
@@ -61,5 +77,6 @@ MainWindow::~MainWindow()
     if (courses) delete courses;
     if (login) delete login;
     if (profile) delete profile;
+    if (signin) delete signin;
     delete ui;
 }

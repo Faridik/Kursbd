@@ -5,6 +5,7 @@
 #include "courseswindow.h"
 #include "profilewindow.h"
 #include "loginwindow.h"
+#include "signinwindow.h"
 
 namespace Ui {
 class MainWindow;
@@ -24,10 +25,13 @@ private:
     coursesWindow *courses;
     profileWindow *profile;
     loginWindow *login;
+    signinWindow *signin;
 public slots:
     void openCoursesWindow();
     void openProfile();
     void openLoginWindow();
+    void openSigninWindow();
+    void backFromSignin();
     void backFromLogin();
     void backFromCourses();
     void backFromProfile();
