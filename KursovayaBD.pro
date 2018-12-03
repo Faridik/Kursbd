@@ -44,3 +44,6 @@ FORMS += \
     courseswindow.ui \
     profilewindow.ui \
     signinwindow.ui
+
+RESOURCES += \
+    images.qrc

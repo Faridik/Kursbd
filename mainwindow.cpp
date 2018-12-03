@@ -6,10 +6,12 @@ MainWindow::MainWindow(QWidget *parent) :
     ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+    ui->coursesButton->setIconSize(QSize(200,130));
+    ui->coursesButton->setIcon(QIcon("C:\\For Farid\\123.png"));
     connect(ui->coursesButton, SIGNAL(pressed()),this, SLOT(openCoursesWindow()));
     connect(ui->loginButton, SIGNAL(pressed()),this, SLOT(openLoginWindow()));
     connect(ui->profileButton, SIGNAL(pressed()),this, SLOT(openProfile()));
-    connect(ui->signinButton, SIGNAL(pressed()),this, SLOT(openSigninWindow()));
+    connect(ui->signinButton, SIGNAL(pressed()),this, SLOT(openSigninWindow()));  
 }
 
 void MainWindow::openCoursesWindow()
